@@ -68,7 +68,7 @@ contents.each do |row|
   phone_number = clean_phone_number(row[:phone])
 
   unless phone_number.nil?
-    # If phone number is valid, you can use it here
+  # Check and display for validity of phone number
     puts "Valid phone number: #{phone_number}"
   else
     puts "Invalid phone number: #{row[:phone]}"
@@ -82,7 +82,7 @@ contents.each do |row|
   puts "Registration Hour: #{registration_hour}"
   puts "Day of the Week: #{registration_day_of_week}"
 
-  # The rest of your code for generating the form letter and saving it goes here...
+  # The phone number and days will be generated in the terminal, the letters will be found in the output file.
   form_letter = erb_template.result(binding)
   save_thank_you_letter(id, form_letter)
 end
