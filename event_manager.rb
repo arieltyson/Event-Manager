@@ -68,7 +68,7 @@ contents.each do |row|
   phone_number = clean_phone_number(row[:phone])
 
   unless phone_number.nil?
-  # Check and display for validity of phone number
+  # Check and display the validity of phone number
     puts "Valid phone number: #{phone_number}"
   else
     puts "Invalid phone number: #{row[:phone]}"
